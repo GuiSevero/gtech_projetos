@@ -1,0 +1,141 @@
+2014/04/15 15:15:53 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[08006] [7] FATAL:  autentica��o do tipo password falhou para usu�rio "postgres"' in C:\Apache\apache\www\yii\framework\db\CDbConnection.php:382
+Stack trace:
+#0 C:\Apache\apache\www\yii\framework\db\CDbConnection.php(331): CDbConnection->open()
+#1 C:\Apache\apache\www\yii\framework\db\CDbConnection.php(309): CDbConnection->setActive(true)
+#2 C:\Apache\apache\www\yii\framework\base\CModule.php(388): CDbConnection->init()
+#3 C:\Apache\apache\www\yii\framework\base\CApplication.php(431): CModule->getComponent('db')
+#4 C:\Apache\apache\www\yii\framework\db\ar\CActiveRecord.php(624): CApplication->getDb()
+#5 C:\Apache\apache\www\yii\framework\db\ar\CActiveRecord.php(2311): CActiveRecord->getDbConnection()
+#6 C:\Apache\apache\www\yii\framework\db\ar\CActiveRecord.php(388): CActiveRecordMetaData->__construct(Object(User))
+#7 C:\Apache\apache\www\yii\framework\db\ar\CActiveRecord.php(403): CActiveRecord::model('User')
+#8 C:\Apache\apache\www\yii\framework\db\ar\CActiveRecord.php(78): CActiveRecord->getMetaData()
+#9 C:\Apache\apache\www\gtech_projetos\protected\components\UserIdentity.php(51): CActiveRecord->__construct()
+#10 C:\Apache\apache\www\gtech_projetos\protected\models\LoginForm.php(54): UserIdentity->auth()
+#11 C:\Apache\apache\www\yii\framework\validators\CInlineValidator.php(43): LoginForm->authenticate('password', Array)
+#12 C:\Apache\apache\www\yii\framework\validators\CValidator.php(214): CInlineValidator->validateAttribute(Object(LoginForm), 'password')
+#13 C:\Apache\apache\www\yii\framework\base\CModel.php(158): CValidator->validate(Object(LoginForm), NULL)
+#14 C:\Apache\apache\www\gtech_projetos\protected\controllers\SiteController.php(130): CModel->validate()
+#15 C:\Apache\apache\www\yii\framework\web\actions\CInlineAction.php(50): SiteController->actionLogin()
+#16 C:\Apache\apache\www\yii\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#17 C:\Apache\apache\www\yii\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#18 C:\Apache\apache\www\yii\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#19 C:\Apache\apache\www\yii\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#20 C:\Apache\apache\www\yii\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#21 C:\Apache\apache\www\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#22 C:\Apache\apache\www\yii\framework\web\CController.php(292): CFilterChain->run()
+#23 C:\Apache\apache\www\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#24 C:\Apache\apache\www\yii\framework\web\CWebApplication.php(283): CController->run('login')
+#25 C:\Apache\apache\www\yii\framework\web\CWebApplication.php(142): CWebApplication->runController('site/login')
+#26 C:\Apache\apache\www\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#27 C:\Apache\apache\www\gtech_projetos\index.php(15): CApplication->run()
+#28 {main}
+REQUEST_URI=/gtech_projetos/index.php/site/login
+HTTP_REFERER=http://localhost/gtech_projetos/index.php/site/login
+---
+2014/04/15 15:42:19 [error] [exception.CException] exception 'CException' with message 'A propriedade "ClassPlan.objectives" não está definida.' in C:\Apache\apache\www\yii\framework\base\CComponent.php:131
+Stack trace:
+#0 C:\Apache\apache\www\yii\framework\db\ar\CActiveRecord.php(144): CComponent->__get('objectives')
+#1 C:\Apache\apache\www\yii\framework\web\helpers\CHtml.php(2158): CActiveRecord->__get('objectives')
+#2 C:\Apache\apache\www\yii\framework\web\helpers\CHtml.php(1371): CHtml::resolveValue(Object(ClassPlan), 'objectives')
+#3 C:\Apache\apache\www\yii\framework\web\widgets\CActiveForm.php(703): CHtml::activeTextArea(Object(ClassPlan), 'objectives', Array)
+#4 C:\Apache\apache\www\gtech_projetos\protected\views\classPlan\_form.php(124): CActiveForm->textArea(Object(ClassPlan), 'objectives', Array)
+#5 C:\Apache\apache\www\yii\framework\web\CBaseController.php(127): require('C:\Apache\apach...')
+#6 C:\Apache\apache\www\yii\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\Apache\apach...', Array, true)
+#7 C:\Apache\apache\www\yii\framework\web\CController.php(870): CBaseController->renderFile('C:\Apache\apach...', Array, true)
+#8 C:\Apache\apache\www\gtech_projetos\protected\views\classPlan\create.php(18): CController->renderPartial('_form', Array)
+#9 C:\Apache\apache\www\yii\framework\web\CBaseController.php(127): require('C:\Apache\apach...')
+#10 C:\Apache\apache\www\yii\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\Apache\apach...', Array, true)
+#11 C:\Apache\apache\www\yii\framework\web\CController.php(870): CBaseController->renderFile('C:\Apache\apach...', Array, true)
+#12 C:\Apache\apache\www\yii\framework\web\CController.php(783): CController->renderPartial('create', Array, true)
+#13 C:\Apache\apache\www\gtech_projetos\protected\controllers\ClassPlanController.php(109): CController->render('create', Array)
+#14 C:\Apache\apache\www\yii\framework\web\actions\CInlineAction.php(50): ClassPlanController->actionCreate()
+#15 C:\Apache\apache\www\yii\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#16 C:\Apache\apache\www\yii\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#17 C:\Apache\apache\www\yii\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#18 C:\Apache\apache\www\yii\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#19 C:\Apache\apache\www\yii\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#20 C:\Apache\apache\www\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#21 C:\Apache\apache\www\yii\framework\web\CController.php(292): CFilterChain->run()
+#22 C:\Apache\apache\www\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#23 C:\Apache\apache\www\yii\framework\web\CWebApplication.php(283): CController->run('create')
+#24 C:\Apache\apache\www\yii\framework\web\CWebApplication.php(142): CWebApplication->runController('classPlan/creat...')
+#25 C:\Apache\apache\www\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#26 C:\Apache\apache\www\gtech_projetos\index.php(15): CApplication->run()
+#27 {main}
+REQUEST_URI=/gtech_projetos/index.php/aulas/create
+HTTP_REFERER=http://localhost/gtech_projetos/index.php/aulas/8
+---
+2014/04/15 16:02:41 [error] [exception.CException] exception 'CException' with message 'A propriedade "ClassPlan.objectives" não está definida.' in C:\Apache\apache\www\yii\framework\base\CComponent.php:131
+Stack trace:
+#0 C:\Apache\apache\www\yii\framework\db\ar\CActiveRecord.php(144): CComponent->__get('objectives')
+#1 C:\Apache\apache\www\gtech_projetos\protected\views\classPlan\view.php(53): CActiveRecord->__get('objectives')
+#2 C:\Apache\apache\www\yii\framework\web\CBaseController.php(127): require('C:\Apache\apach...')
+#3 C:\Apache\apache\www\yii\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\Apache\apach...', Array, true)
+#4 C:\Apache\apache\www\yii\framework\web\CController.php(870): CBaseController->renderFile('C:\Apache\apach...', Array, true)
+#5 C:\Apache\apache\www\yii\framework\web\CController.php(783): CController->renderPartial('view', Array, true)
+#6 C:\Apache\apache\www\gtech_projetos\protected\controllers\ClassPlanController.php(67): CController->render('view', Array)
+#7 [internal function]: ClassPlanController->actionView('9')
+#8 C:\Apache\apache\www\yii\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs(Object(ClassPlanController), Array)
+#9 C:\Apache\apache\www\yii\framework\web\actions\CInlineAction.php(48): CAction->runWithParamsInternal(Object(ClassPlanController), Object(ReflectionMethod), Array)
+#10 C:\Apache\apache\www\yii\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#11 C:\Apache\apache\www\yii\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#12 C:\Apache\apache\www\yii\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#13 C:\Apache\apache\www\yii\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#14 C:\Apache\apache\www\yii\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#15 C:\Apache\apache\www\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#16 C:\Apache\apache\www\yii\framework\web\CController.php(292): CFilterChain->run()
+#17 C:\Apache\apache\www\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 C:\Apache\apache\www\yii\framework\web\CWebApplication.php(283): CController->run('view')
+#19 C:\Apache\apache\www\yii\framework\web\CWebApplication.php(142): CWebApplication->runController('classPlan/view')
+#20 C:\Apache\apache\www\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#21 C:\Apache\apache\www\gtech_projetos\index.php(15): CApplication->run()
+#22 {main}
+REQUEST_URI=/gtech_projetos/index.php/aulas/9
+HTTP_REFERER=http://localhost/gtech_projetos/index.php/aulas/create
+---
+2014/04/15 16:03:48 [error] [exception.CException] exception 'CException' with message 'A propriedade "ClassPlan.objectives" não está definida.' in C:\Apache\apache\www\yii\framework\base\CComponent.php:131
+Stack trace:
+#0 C:\Apache\apache\www\yii\framework\db\ar\CActiveRecord.php(144): CComponent->__get('objectives')
+#1 C:\Apache\apache\www\gtech_projetos\protected\views\classPlan\student.php(74): CActiveRecord->__get('objectives')
+#2 C:\Apache\apache\www\yii\framework\web\CBaseController.php(127): require('C:\Apache\apach...')
+#3 C:\Apache\apache\www\yii\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\Apache\apach...', Array, true)
+#4 C:\Apache\apache\www\yii\framework\web\CController.php(870): CBaseController->renderFile('C:\Apache\apach...', Array, true)
+#5 C:\Apache\apache\www\yii\framework\web\CController.php(783): CController->renderPartial('student', Array, true)
+#6 C:\Apache\apache\www\gtech_projetos\protected\controllers\ClassPlanController.php(84): CController->render('student', Array)
+#7 [internal function]: ClassPlanController->actionPlan('9')
+#8 C:\Apache\apache\www\yii\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs(Object(ClassPlanController), Array)
+#9 C:\Apache\apache\www\yii\framework\web\actions\CInlineAction.php(48): CAction->runWithParamsInternal(Object(ClassPlanController), Object(ReflectionMethod), Array)
+#10 C:\Apache\apache\www\yii\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#11 C:\Apache\apache\www\yii\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#12 C:\Apache\apache\www\yii\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#13 C:\Apache\apache\www\yii\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#14 C:\Apache\apache\www\yii\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#15 C:\Apache\apache\www\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#16 C:\Apache\apache\www\yii\framework\web\CController.php(292): CFilterChain->run()
+#17 C:\Apache\apache\www\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 C:\Apache\apache\www\yii\framework\web\CWebApplication.php(283): CController->run('plan')
+#19 C:\Apache\apache\www\yii\framework\web\CWebApplication.php(142): CWebApplication->runController('classPlan/plan')
+#20 C:\Apache\apache\www\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#21 C:\Apache\apache\www\gtech_projetos\index.php(15): CApplication->run()
+#22 {main}
+REQUEST_URI=/gtech_projetos/index.php/plan/9
+HTTP_REFERER=http://localhost/gtech_projetos/index.php/aulas/9
+---
+2014/04/15 16:07:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Não foi possível resolver a requisição "aulas/update".' in C:\Apache\apache\www\yii\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\Apache\apache\www\yii\framework\web\CWebApplication.php(142): CWebApplication->runController('aulas/update')
+#1 C:\Apache\apache\www\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\Apache\apache\www\gtech_projetos\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/gtech_projetos/index.php/aulas/update/8
+HTTP_REFERER=http://localhost/gtech_projetos/index.php/usuario/2
+---
+2014/06/08 16:00:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Não foi possível resolver a requisição "projetos/sobek.ufrgs.br/api".' in C:\Apache\apache\www\yii\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\Apache\apache\www\yii\framework\web\CWebApplication.php(142): CWebApplication->runController('projetos/sobek....')
+#1 C:\Apache\apache\www\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\Apache\apache\www\gtech_projetos\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/gtech_projetos/index.php/projetos/sobek.ufrgs.br/api?texto=A+Geografia+%C3%A9+a+ci%C3%AAncia+que+estuda+o+conjunto+de+fen%C3%B3menos+naturais+e+humanos+que+constituem+aspetos+da+superfic%C3%ADe+da+Terra%2C+considerada+na+sua+distribui%C3%A7%C3%A3o+e+rela%C3%A7%C3%B5es+rec%C3%ADprocas.1+A+Geografia+estuda+a+superf%C3%ADcie+terrestre.2+A+origem+etimol%C3%B3gica+do+termo+%C3%A9+derivada+dos+radicais+gregos+geo+%3D+Terra+%2B+graphein+%3D+escrever.3+4+Descreve+as+paisagens+que+resultaram+da+rela%C3%A7%C3%A3o+entre+o+homem+e+a+natureza.2+Desde+a+mais+alta+antiguidade+o+homem+se+preocupava+com+o+conhecimento+do+espa%C3%A7o+em+que+vivia.5+%C3%80s+vezes+esse+conhecimento+era+uma+resposta+desejada+pela+curiosidade.5+Outras+vezes+tais+conhecimentos+tinham+objetivos+econ%C3%B4micos+ou+pol%C3%ADticos.5+O+modo+como+%C3%A9+tratado+sistematicamente+o+conhecimento+da+Terra+%C3%A9+o+objetivo+espec%C3%ADfico+da+Geografia.2+A+Geografia+%C3%A9+uma+disciplina+que+nasceu+na+pr%C3%B3pria+origem+humana.+Mas+s%C3%B3+se+tornou+uma+ci%C3%AAncia+somente+depois+que+a+civiliza%C3%A7%C3%A3o+grega+floresceu.5+6
+HTTP_REFERER=http://localhost/gtech_projetos/index.php/projetos/3
+---
